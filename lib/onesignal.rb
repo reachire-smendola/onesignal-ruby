@@ -66,7 +66,6 @@ module OneSignal
       Responses::Player.from_json fetched.body
     end
 
-
     def fetch_players
       return unless OneSignal.config.active
 

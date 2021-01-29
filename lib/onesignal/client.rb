@@ -62,8 +62,7 @@ module OneSignal
 
     def delete url
       res = @conn.delete do |req|
-        req.url url
-        req.headers['Content-Type'] = 'application/json'
+        req.url url, app_id: @app_id
         req.headers['Authorization'] = "Basic #{@api_key}"
       end
 
